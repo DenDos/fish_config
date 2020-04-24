@@ -1,5 +1,4 @@
 function fish_greeting -d "Greeting message on shell session start up"
-
     echo ""
     echo -en "        |         " (welcome_message) "\n"
     echo -en "       / \        \n"
@@ -12,19 +11,16 @@ function fish_greeting -d "Greeting message on shell session start up"
     echo -en "  |,-'--|--'-.|   " (show_net_info) "\n"
     echo ""
     set_color grey
-    echo "Have a nice trip"
+    echo ""
     set_color normal
 end
 
-
 function welcome_message -d "Say welcome to user"
-
     echo -en "Welcome aboard komandir"
     set_color FFF  # white
     echo -n " COTOHA!"
     set_color normal
 end
-
 
 function show_date_info -d "Prints information about date"
 
@@ -53,7 +49,6 @@ function show_date_info -d "Prints information about date"
     echo -en "."
 end
 
-
 function show_os_info -d "Prints operating system info"
     set_color yellow
     echo -en "\tOS: "
@@ -61,7 +56,6 @@ function show_os_info -d "Prints operating system info"
     echo -en (uname -sm)
     set_color normal
 end
-
 
 function show_cpu_info -d "Prints iformation about cpu"
 
@@ -90,7 +84,6 @@ function show_cpu_info -d "Prints iformation about cpu"
     set_color normal
 end
 
-
 function show_mem_info -d "Prints memory information"
 
     set --local os_type (uname -s)
@@ -109,7 +102,6 @@ function show_mem_info -d "Prints memory information"
     echo -en $total_memory
     set_color normal
 end
-
 
 function show_net_info -d "Prints information about network"
 
