@@ -1,0 +1,1 @@
+/Users/cotoha/.fzf/shell/key-bindings.fish
