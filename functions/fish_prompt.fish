@@ -1,1 +1,1 @@
-/Users/cotoha/.local/share/omf/themes/spacefish/fish_prompt.fish
+/Users/cotoha/.local/share/omf/themes/nai/fish_prompt.fish
