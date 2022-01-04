@@ -1,14 +1,82 @@
 function fish_greeting -d "Greeting message on shell session start up"
+  set arr rainbow_kitty anime_tan rocket anime_tan2 weird_elephant
+  set rand (random 1 1 5)
+  eval $arr[$rand]
+end
+
+function weird_elephant
+  echo -en "
+    ███▅▄▄▄▄▄▄▄▄▄     "(welcome_message)"
+    ██▐████████████   "(show_date_info)"
+  ▐█▀████████████▌▌
+  ▐ ▀▀▀▐█▌▀▀███▀█ ▌   "(show_net_info)"
+  ▐▄   ▄█   ▄█▌▄█     "(show_os_info)"
+
+  "
+end
+
+function anime_tan2
+  echo -en "
+░░░░█▐▄▒▒▒▌▌▒▒▌░▌▒▐▐▐▒▒▐▒▒▌▒▀▄▀▄░
+░░░█▐▒▒▀▀▌░▀▀▀░░▀▀▀░░▀▀▄▌▌▐▒▒▒▌▐░   "(welcome_message)"
+░░▐▒▒▀▀▄▐░▀▀▄▄░░░░░░░░░░░▐▒▌▒▒▐░▌   "(show_date_info)"
+░░▐▒▌▒▒▒▌░▄▄▄▄█▄░░░░░░░▄▄▄▐▐▄▄▀░░
+░░▌▐▒▒▒▐░░░░░░░░░░░░░▀█▄░░░░▌▌░░░   "(show_net_info)"
+▄▀▒▒▌▒▒▐░░░░░░░▄░░▄░░░░░▀▀░░▌▌░░░   "(show_os_info)"
+▄▄▀▒▐▒▒▐░░░░░░░▐▀▀▀▄▄▀░░░░░░▌▌░░░
+░░░░█▌▒▒▌░░░░░▐▒▒▒▒▒▌░░░░░░▐▐▒▀▀▄
+░░▄▀▒▒▒▒▐░░░░░▐▒▒▒▒▐░░░░░▄█▄▒▐▒▒▒
+▄▀▒▒▒▒▒▄██▀▄▄░░▀▄▄▀░░▄▄▀█▄░█▀▒▒▒▒
+
+  "
+end
+
+function anime_tan
+  echo -en "  ⣿⣿⣷⡁⢆⠈⠕⢕⢂⢕⢂⢕⢂⢔⢂⢕⢄⠂⣂⠂⠆⢂⢕⢂⢕⢂⢕⢂⢕⢂
+  ⣿⣿⣿⡷⠊⡢⡹⣦⡑⢂⢕⢂⢕⢂⢕⢂⠕⠔⠌⠝⠛⠶⠶⢶⣦⣄⢂⢕⢂⢕  "(welcome_message)"
+  ⣿⣿⠏⣠⣾⣦⡐⢌⢿⣷⣦⣅⡑⠕⠡⠐⢿⠿⣛⠟⠛⠛⠛⠛⠡⢷⡈⢂⢕⢂  "(show_date_info)"
+  ⠟⣡⣾⣿⣿⣿⣿⣦⣑⠝⢿⣿⣿⣿⣿⣿⡵⢁⣤⣶⣶⣿⢿⢿⢿⡟⢻⣤⢑⢂  
+  ⣾⣿⣿⡿⢟⣛⣻⣿⣿⣿⣦⣬⣙⣻⣿⣿⣷⣿⣿⢟⢝⢕⢕⢕⢕⢽⣿⣿⣷⣔  "(show_os_info)"
+  ⣿⣿⠵⠚⠉⢀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣗⢕⢕⢕⢕⢕⢕⣽⣿⣿⣿⣿  "(show_net_info)"
+  ⢷⣂⣠⣴⣾⡿⡿⡻⡻⣿⣿⣴⣿⣿⣿⣿⣿⣿⣷⣵⣵⣵⣷⣿⣿⣿⣿⣿⣿⡿
+  ⢌⠻⣿⡿⡫⡪⡪⡪⡪⣺⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃
+  ⠣⡁⠹⡪⡪⡪⡪⣪⣾⣿⣿⣿⣿⠋⠐⢉⢍⢄⢌⠻⣿⣿⣿⣿⣿⣿⣿⣿⠏⠈
+  ⡣⡘⢄⠙⣾⣾⣾⣿⣿⣿⣿⣿⣿⡀⢐⢕⢕⢕⢕⢕⡘⣿⣿⣿⣿⣿⣿⠏⠠⠈
+  ⠌⢊⢂⢣⠹⣿⣿⣿⣿⣿⣿⣿⣿⣧⢐⢕⢕⢕⢕⢕⢅⣿⣿⣿⣿⡿⢋⢜⠠⠈
+  ⠄⠁⠕⢝⡢⠈⠻⣿⣿⣿⣿⣿⣿⣿⣷⣕⣑⣑⣑⣵⣿⣿⣿⡿⢋⢔⢕⣿⠠⠈
+  ⠨⡂⡀⢑⢕⡅⠂⠄⠉⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋⢔⢕⢕⣿⣿⠠⠈
+  ⠄⠪⣂⠁⢕⠆⠄⠂⠄⠁⡀⠂⡀⠄⢈⠉⢍⢛⢛⢛⢋⢔⢕⢕⢕⣽⣿⣿⠠⠈
+
+  "
+end
+
+function rainbow_kitty
+  echo -en   "
+      █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+      █░▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒░█
+      █░▒▒▓▒▒▒▒▒▒▒▒▒▄▄▒▓▒▒░█░▄▄
+▄▀▀▄▄█░▒▒▒▒▒▒▓▒▒▒▒█░░▀▄▄▄▄▄▀░░█   "(welcome_message)"
+█░░░░█░▒▒▒▒▒▒▒▒▒▒▒█░░░░░░░░░░░█   "(show_date_info)"
+▀▀▄▄█░▒▒▒▒▓▒▒▒▓▒█░░░█▒░░░░█▒░░█
+    █░▒▓▒▒▒▒▓▒▒▒█░░░░░░░▀░░░░░█   "(show_os_info)"
+  ▄▄█░▒▒▒▓▒▒▒▒▒▒▒█░░█▄▄█▄▄█░░█    "(show_net_info)"
+  █░░░█▄▄▄▄▄▄▄▄▄▄█░█▄▄▄▄▄▄▄▄▄█
+  █▄▄█  █▄▄█      █▄▄█  █▄▄█
+
+  "
+end
+
+function rocket -d "Greeting message on shell session start up"
     echo ""
     echo -en "        |         " (welcome_message) "\n"
     echo -en "       / \        \n"
     echo -en "      / _ \       " (show_date_info) "\n"
     echo -en "     |.o '.|      \n"
-    echo -en "     |'._.'|      space vessel computer:\n"
-    echo -en "     |     |      " (show_os_info) "\n"
-    echo -en "   ,'|  |  |`.    " (show_cpu_info) "\n"
-    echo -en "  /  |  |  |  \   " (show_mem_info) "\n"
-    echo -en "  |,-'--|--'-.|   " (show_net_info) "\n"
+    echo -en "     |'._.'|      " (show_os_info) "\n"
+    echo -en "     |     |      " (show_net_info) "\n"
+    echo -en "   ,'|  |  |`.    \n"
+    echo -en "  /  |  |  |  \   \n"
+    echo -en "  |,-'--|--'-.|   \n"
     echo ""
     set_color grey
     echo ""
@@ -51,7 +119,7 @@ end
 
 function show_os_info -d "Prints operating system info"
     set_color yellow
-    echo -en "\tOS: "
+    echo -en "OS: "
     set_color normal  # green
     echo -en (uname -sm)
     set_color normal
@@ -97,7 +165,7 @@ function show_mem_info -d "Prints memory information"
     end
 
     set_color yellow
-    echo -en "\tMemory: "
+    echo -en "Memory: "
     set_color normal  # green
     echo -en $total_memory
     set_color normal
@@ -119,7 +187,7 @@ function show_net_info -d "Prints information about network"
     end
 
     set_color yellow
-    echo -en "\tNet: "
+    echo -en "Net: "
     set_color normal  # green
     echo -en "Ip address $ip, default gateway $gw"
     set_color normal
