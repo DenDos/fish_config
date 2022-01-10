@@ -4,12 +4,6 @@ alias ngrok="$HOME/ngrok"
 # alias vimr="open -a VimR.app $argv"
 alias open_vim_conf="nvim /Users/cotoha/.config/nvim"
 
-
-#Node Start
-alias bn="babel-node"
-alias bnr="babel-node server/index.js"
-alias node_start="nodemon --exec babel-node server/index.js"
-
 # Flutter
 alias flutter_build_runner_watch="flutter packages pub run build_runner watch --delete-conflicting-outputs"
 
@@ -40,4 +34,3 @@ alias git_get_email="git config --global user.email"
 alias kill_ruby="sh /Users/cotoha/.config/fish/functions/kill_ruby.sh"
 alias br="bin/rake"
 alias bs="bin/rails"
-
