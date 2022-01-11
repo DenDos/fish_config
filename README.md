@@ -8,4 +8,10 @@ fish
 fish_add_path /opt/homebrew/bin
 echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
-``
+```
+
+# For python install on M1 mac
+```ruby
+  https://github.com/pyenv/pyenv#installation
+```
+
