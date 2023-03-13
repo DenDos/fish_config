@@ -1,0 +1,1 @@
+/Users/cotoha/.fig/shell/pre.fish

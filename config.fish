@@ -3,8 +3,21 @@
 . "$HOME/.config/fish/functions/main_functions.fish"
 . "$HOME/.config/fish/colors.fish"
 
+export NVM_DIR=~/.nvm
+# source (brew --prefix nvm)/nvm.sh
+
 # FLUTTER
 set -x PATH "/Users/cotoha/Documents/libs/flutter/bin" $PATH
+
+# JAVA
+export JAVA_HOME=(/usr/libexec/java_home)
+
+# Rust
+set -x PATH $HOME/.cargo/bin $PATH
+
+# Android SDK
+set -x PATH $HOME/Library/Android/sdk $PATH
+set -x PATH $HOME/Library/Android/sdk/platform-tools $PATH
 
 #ASDF SETUP
 source /opt/homebrew/opt/asdf/libexec/asdf.fish

@@ -1,4 +1,7 @@
-alias ngrok="$HOME/ngrok"
+# alias ngrok="$HOME/ngrok"
+
+# System
+alias show_port_usage='sudo lsof -i -P | grep LISTEN | grep'
 
 # VimR
 # alias vimr="open -a VimR.app $argv"
@@ -12,23 +15,16 @@ alias mongo_start="/Users/cotoha/Documents/mongodb/bin/mongod"
 
 # Folders
 alias projects="cd ~/Documents/projects"
-alias govno="cd /Users/cotoha/Documents/govno"
 alias learning="cd /Users/cotoha/Documents/learning"
 
 #Projects
 alias apidocs="apidoc -i server/api/controllers -o server/apidoc"
-alias surveyer="cd /Users/cotoha/Documents/projects/friday"
 alias friday="cd /Users/cotoha/Documents/projects/friday"
+alias zeneducate="cd /Users/cotoha/Documents/projects/zeneducate"
 
 # GIT
 alias gb="git branch"
 alias gs="git status"
-alias gsn="git config --global user.name 'comeonandroid'"
-alias gmn="git config --global user.name 'Dendos'"
-alias gse="git config --global user.email 'comeonandroid@gmail.com'"
-alias gme="git config --global user.email 'cotoha92@gmail.com'"
-alias git_get_email="git config --global user.email"
-
 
 # RAILS
 alias kill_ruby="sh /Users/cotoha/.config/fish/functions/kill_ruby.sh"
